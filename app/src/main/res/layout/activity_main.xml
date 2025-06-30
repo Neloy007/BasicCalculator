@@ -34,7 +34,7 @@
 
     <Button
         android:id="@+id/addBtn"
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="+"
         android:textSize="30sp"
@@ -44,7 +44,7 @@
 
     <Button
         android:id="@+id/subBtn"
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="-"
         android:textSize="30sp"
@@ -54,7 +54,7 @@
 
     <Button
         android:id="@+id/mulBtn"
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="x"
         android:textSize="30sp"
@@ -63,13 +63,23 @@
         app:layout_constraintStart_toEndOf="@+id/subBtn"/>
     <Button
         android:id="@+id/divBtn"
-        android:layout_width="100dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="÷"
         android:textSize="30sp"
         app:cornerRadius="1dp"
         app:layout_constraintTop_toBottomOf="@+id/secondEt"
         app:layout_constraintStart_toEndOf="@+id/mulBtn"/>
+    <Button
+        android:id="@+id/modBtn"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:textSize="30sp"
+        app:cornerRadius="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/secondEt"
+        app:layout_constraintStart_toEndOf="@+id/divBtn"/>
+
 
     <Button
         android:id="@+id/resetBtn"

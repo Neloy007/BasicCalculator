@@ -33,6 +33,10 @@ class MainActivity : AppCompatActivity() {
             calculate("÷")
         }
 
+        binding.modBtn.setOnClickListener {
+            calculate("%")
+        }
+
         binding.resetBtn.setOnClickListener {
             binding.firstEt.text.clear()
             binding.secondEt.text.clear()
@@ -64,10 +68,16 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this,"Connot Devide By Zero", Toast.LENGTH_LONG).show()
                 return
             }else{
-                num1 / num2
+              num1/num2
+            }
+            "%" -> if(num2 ==0.0){
+                Toast.makeText(this,"Connot Modulus", Toast.LENGTH_LONG).show()
+                return
+            }else{
+                num1 % num2
             }
             else -> 0.0
         }
-        binding.resultTv.text = "Result: $result"
+        binding.resultTv.text = "Result: %.2f".format(result)
     }
 }
